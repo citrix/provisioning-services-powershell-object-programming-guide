@@ -1,637 +1,640 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Programmer's Guide for Citrix Provisioning Services 7.12 with Objects">
-  
-  
-  <title>Citrix Provisioning Services 7.12 PowerShell with Objects Programmer’s Guide</title>
-  
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
 
-  <link rel="shortcut icon" href="
-https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Programmer's Guide for Citrix Provisioning Services 7.12 with Objects">  
+    <title>Citrix Provisioning Services 7.12 PowerShell with Objects Programmer’s Guide</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="./css/highlight.css">
+    <link rel="stylesheet" href="./css/override.css" type="text/css" />
+    <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "None";
+      var mkdocs_page_input_path = "index.md";
+      var mkdocs_page_url = "/";
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/highlight.css">
-  <link rel="stylesheet" href="./css/override.css" type="text/css" />
-  <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" />
-
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "None";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
-  </script>
-  
-  <script src="./js/jquery-1.10.2.min.js"></script>
-  <script src="./js/bootstrap-3.0.3.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script>
-  <script src="./js/theme.js"></script>
-  <script src="./js/base.js"></script>
-  <script src="./js/custom.js"></script>
-  <script src="./js/nav.js"></script> 
-
-  
-</head>
-
-<body class="wy-body-for-nav" role="document" data-spy="scroll" data-target=".bs-sidebar">
-
-	<div class="header-top">
-		<div class="header-top-left">
-			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
-		</div>
-		<div class="header-top-right">
-			<ul>
-			<!--	<li class="list-inline home"><a href=".">HOME</a></li>
-				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
-				<form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs"
-            class="searchdocs">
-<a class="fa fa-search errspan"></a></li>
-</form>
-				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
-			</ul>
-
-		</div>
-	</div>
-  <div class="wy-grid-for-nav">
-
+    </script>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <div role="search">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="./js/highlight.pack.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+      
+        <div class="header-top-left">
+          <a href="http://citrix.github.io" class="logo-position"><img height="60" src="./img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+            </form>
+
+          </ul>
+
+        </div>
+      
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
 	<i class="fa fa-search"></i>
     <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
-      </div>
+          </div>
 
-      <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
-			<div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-    
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        
-            <li><a href="#using-the-powershell-programmer-interface-withobjects">Using the PowerShell Programmer Interface withObjects</a></li>
-        
-    
-        <li class="main "><a href="#installation-of-powershell-snap-in">Installation of PowerShell Snap-In</a></li>
-        
-            <li><a href="#registration-of-mclipssnapindll-usingimport-module">Registration of McliPSSnapIn.dll usingImport-Module</a></li>
-        
-            <li><a href="#registration-of-citrixpvssnapindll-usingadd-pssnapin">Registration of Citrix.PVS.SnapIn.dll usingAdd-PSSnapin</a></li>
-        
-            <li><a href="#alternative-registration-of-citrixpvssnapindllin-powershell">Alternative Registration of Citrix.PVS.SnapIn.dllin PowerShell</a></li>
-        
-    
-        <li class="main "><a href="#uninstall-of-powershell-snap-in">Uninstall of PowerShell Snap-In</a></li>
-        
-            <li><a href="#unregister-of-citrixpvssnapindll">Unregister of Citrix.PVS.SnapIn.dll</a></li>
-        
-            <li><a href="#alternative-unregister-of-citrixpvssnapindll-inpowershell">Alternative Unregister of Citrix.PVS.SnapIn.dll inPowerShell</a></li>
-        
-    
-        <li class="main "><a href="#setup-of-the-soap-server-communication">Setup of the SOAP Server Communication</a></li>
-        
-            <li><a href="#set-pvsconnection">Set-PvsConnection</a></li>
-        
-    
-        <li class="main "><a href="#command-specific-help">Command Specific Help</a></li>
-        
-    
-        <li class="main "><a href="#error-handling">Error Handling</a></li>
-        
-    
-        <li class="main "><a href="#short-cmdlet-list">Short cmdlet list</a></li>
-        
-    
-        <li class="main "><a href="#cmdlet-by-object-type">Cmdlet by Object Type</a></li>
-        
-            <li><a href="#many">Many</a></li>
-        
-            <li><a href="#authgroup">AuthGroup</a></li>
-        
-            <li><a href="#ceipdata">CeipData</a></li>
-        
-            <li><a href="#cisdata">CisData</a></li>
-        
-            <li><a href="#collection">Collection</a></li>
-        
-            <li><a href="#device">Device</a></li>
-        
-            <li><a href="#disk">Disk</a></li>
-        
-            <li><a href="#disklocator">DiskLocator</a></li>
-        
-            <li><a href="#farm">Farm</a></li>
-        
-            <li><a href="#farmview">FarmView</a></li>
-        
-            <li><a href="#server">Server</a></li>
-        
-            <li><a href="#site">Site</a></li>
-        
-            <li><a href="#siteview">SiteView</a></li>
-        
-            <li><a href="#store">Store</a></li>
-        
-            <li><a href="#system">System</a></li>
-        
-            <li><a href="#task">Task</a></li>
-        
-            <li><a href="#updatetask">UpdateTask</a></li>
-        
-    
-        <li class="main "><a href="#error-codes">Error codes</a></li>
-        
-    
-        <li class="main "><a href="#objects-in-the-citrixpvssnapin-namespace">Objects, in the Citrix.PVS.SnapIn Namespace</a></li>
-        
-            <li><a href="#pvsadaccount">PvsADAccount</a></li>
-        
-            <li><a href="#pvsauditaction">PvsAuditAction</a></li>
-        
-            <li><a href="#pvsauditactionparameter">PvsAuditActionParameter</a></li>
-        
-            <li><a href="#pvsauditactionproperty">PvsAuditActionProperty</a></li>
-        
-            <li><a href="#pvsaudittrail">PvsAuditTrail</a></li>
-        
-            <li><a href="#pvsauthgroup">PvsAuthGroup</a></li>
-        
-            <li><a href="#pvsauthgroupusage">PvsAuthGroupUsage</a></li>
-        
-            <li><a href="#pvsceipdata">PvsCeipData</a></li>
-        
-            <li><a href="#pvscisdata">PvsCisData</a></li>
-        
-            <li><a href="#pvscollection">PvsCollection</a></li>
-        
-            <li><a href="#pvsconnection">PvsConnection</a></li>
-        
-            <li><a href="#pvsdevice">PvsDevice</a></li>
-        
-            <li><a href="#pvsdevicebootstrap">PvsDeviceBootstrap</a></li>
-        
-            <li><a href="#pvsdevicebootstraplist">PvsDeviceBootstrapList</a></li>
-        
-            <li><a href="#pvsdevicedisktempversion">PvsDeviceDiskTempVersion</a></li>
-        
-            <li><a href="#pvsdeviceinfo">PvsDeviceInfo</a></li>
-        
-            <li><a href="#pvsdevicepersonality">PvsDevicePersonality</a></li>
-        
-            <li><a href="#pvsdevicepersonalitylist">PvsDevicePersonalityList</a></li>
-        
-            <li><a href="#pvsdevicestatus">PvsDeviceStatus</a></li>
-        
-            <li><a href="#pvsdisk">PvsDisk</a></li>
-        
-            <li><a href="#pvsdiskinfo">PvsDiskInfo</a></li>
-        
-            <li><a href="#pvsdiskinventory">PvsDiskInventory</a></li>
-        
-            <li><a href="#pvsdisklocator">PvsDiskLocator</a></li>
-        
-            <li><a href="#pvsdisklocatorlock">PvsDiskLocatorLock</a></li>
-        
-            <li><a href="#pvsdiskupdatedevice">PvsDiskUpdateDevice</a></li>
-        
-            <li><a href="#pvsdiskupdatestatus">PvsDiskUpdateStatus</a></li>
-        
-            <li><a href="#pvsdiskversion">PvsDiskVersion</a></li>
-        
-            <li><a href="#pvsfarm">PvsFarm</a></li>
-        
-            <li><a href="#pvsfarmview">PvsFarmView</a></li>
-        
-            <li><a href="#pvsgroup">PvsGroup</a></li>
-        
-            <li><a href="#pvslocalserver">PvsLocalServer</a></li>
-        
-            <li><a href="#pvsnewdiskversion">PvsNewDiskVersion</a></li>
-        
-            <li><a href="#pvsphysicaladdress">PvsPhysicalAddress</a></li>
-        
-            <li><a href="#pvsserver">PvsServer</a></li>
-        
-            <li><a href="#pvsserverbiosbootstrap">PvsServerBiosBootstrap</a></li>
-        
-            <li><a href="#pvsserverbootstrap">PvsServerBootstrap</a></li>
-        
-            <li><a href="#pvsserverbootstrapname">PvsServerBootstrapName</a></li>
-        
-            <li><a href="#pvsserverinfo">PvsServerInfo</a></li>
-        
-            <li><a href="#pvsserverstatus">PvsServerStatus</a></li>
-        
-            <li><a href="#pvsserverstore">PvsServerStore</a></li>
-        
-            <li><a href="#pvssite">PvsSite</a></li>
-        
-            <li><a href="#pvssiteview">PvsSiteView</a></li>
-        
-            <li><a href="#pvsstore">PvsStore</a></li>
-        
-            <li><a href="#pvsstoresharedorserverpath">PvsStoreSharedOrServerPath</a></li>
-        
-            <li><a href="#pvstask">PvsTask</a></li>
-        
-            <li><a href="#pvsundefineddisk">PvsUndefinedDisk</a></li>
-        
-            <li><a href="#pvsupdatetask">PvsUpdateTask</a></li>
-        
-            <li><a href="#pvsversion">PvsVersion</a></li>
-        
-            <li><a href="#pvsvirtualhostingpool">PvsVirtualHostingPool</a></li>
-        
-            <li><a href="#pvsxdsite">PvsXDSite</a></li>
-        
-    
-        <li class="main "><a href="#cmdlets">Cmdlets</a></li>
-        
-            <li><a href="#add-pvsdevicetodomain">Add-PvsDeviceToDomain</a></li>
-        
-            <li><a href="#add-pvsdevicetoview">Add-PvsDeviceToView</a></li>
-        
-            <li><a href="#add-pvsdisklocatortodevice">Add-PvsDiskLocatorToDevice</a></li>
-        
-            <li><a href="#add-pvsdisktoupdatetask">Add-PvsDiskToUpdateTask</a></li>
-        
-            <li><a href="#add-pvsdiskversion">Add-PvsDiskVersion</a></li>
-        
-            <li><a href="#clear-pvsconnection">Clear-PvsConnection</a></li>
-        
-            <li><a href="#clear-pvstask">Clear-PvsTask</a></li>
-        
-            <li><a href="#copy-pvsdeviceproperties">Copy-PvsDeviceProperties</a></li>
-        
-            <li><a href="#copy-pvsdiskproperties">Copy-PvsDiskProperties</a></li>
-        
-            <li><a href="#copy-pvsserverproperties">Copy-PvsServerProperties</a></li>
-        
-            <li><a href="#disable-pvsdevicedisklocator">Disable-PvsDeviceDiskLocator</a></li>
-        
-            <li><a href="#dismount-pvsdisk">Dismount-PvsDisk</a></li>
-        
-            <li><a href="#enable-pvsdevicedisklocator">Enable-PvsDeviceDiskLocator</a></li>
-        
-            <li><a href="#export-pvsaudittrail">Export-PvsAuditTrail</a></li>
-        
-            <li><a href="#export-pvsdisk">Export-PvsDisk</a></li>
-        
-            <li><a href="#export-pvsoemlicenses">Export-PvsOemLicenses</a></li>
-        
-            <li><a href="#get-pvsadaccount">Get-PvsADAccount</a></li>
-        
-            <li><a href="#get-pvsauditactionparameter">Get-PvsAuditActionParameter</a></li>
-        
-            <li><a href="#get-pvsauditactionproperty">Get-PvsAuditActionProperty</a></li>
-        
-            <li><a href="#get-pvsauditactionsibling">Get-PvsAuditActionSibling</a></li>
-        
-            <li><a href="#get-pvsaudittrail">Get-PvsAuditTrail</a></li>
-        
-            <li><a href="#get-pvsauthgroup">Get-PvsAuthGroup</a></li>
-        
-            <li><a href="#get-pvsauthgroupusage">Get-PvsAuthGroupUsage</a></li>
-        
-            <li><a href="#get-pvsceipdata">Get-PvsCeipData</a></li>
-        
-            <li><a href="#get-pvscisdata">Get-PvsCisData</a></li>
-        
-            <li><a href="#get-pvscollection">Get-PvsCollection</a></li>
-        
-            <li><a href="#get-pvsconnection">Get-PvsConnection</a></li>
-        
-            <li><a href="#get-pvscreatediskstatus">Get-PvsCreateDiskStatus</a></li>
-        
-            <li><a href="#get-pvsdevice">Get-PvsDevice</a></li>
-        
-            <li><a href="#get-pvsdevicebootstrap">Get-PvsDeviceBootstrap</a></li>
-        
-            <li><a href="#get-pvsdevicecount">Get-PvsDeviceCount</a></li>
-        
-            <li><a href="#get-pvsdevicedisklocatorenabled">Get-PvsDeviceDiskLocatorEnabled</a></li>
-        
-            <li><a href="#get-pvsdevicedisktempversion">Get-PvsDeviceDiskTempVersion</a></li>
-        
-            <li><a href="#get-pvsdeviceinfo">Get-PvsDeviceInfo</a></li>
-        
-            <li><a href="#get-pvsdevicepersonality">Get-PvsDevicePersonality</a></li>
-        
-            <li><a href="#get-pvsdevicestatus">Get-PvsDeviceStatus</a></li>
-        
-            <li><a href="#get-pvsdirectory">Get-PvsDirectory</a></li>
-        
-            <li><a href="#get-pvsdisk">Get-PvsDisk</a></li>
-        
-            <li><a href="#get-pvsdiskinfo">Get-PvsDiskInfo</a></li>
-        
-            <li><a href="#get-pvsdiskinventory">Get-PvsDiskInventory</a></li>
-        
-            <li><a href="#get-pvsdisklocator">Get-PvsDiskLocator</a></li>
-        
-            <li><a href="#get-pvsdisklocatorcount">Get-PvsDiskLocatorCount</a></li>
-        
-            <li><a href="#get-pvsdisklocatorlock">Get-PvsDiskLocatorLock</a></li>
-        
-            <li><a href="#get-pvsdiskupdatedevice">Get-PvsDiskUpdateDevice</a></li>
-        
-            <li><a href="#get-pvsdiskupdatestatus">Get-PvsDiskUpdateStatus</a></li>
-        
-            <li><a href="#get-pvsdiskversion">Get-PvsDiskVersion</a></li>
-        
-            <li><a href="#get-pvsexists">Get-PvsExists</a></li>
-        
-            <li><a href="#get-pvsfarm">Get-PvsFarm</a></li>
-        
-            <li><a href="#get-pvsfarmview">Get-PvsFarmView</a></li>
-        
-            <li><a href="#get-pvsgroup">Get-PvsGroup</a></li>
-        
-            <li><a href="#get-pvslocalserver">Get-PvsLocalServer</a></li>
-        
-            <li><a href="#get-pvsmaintenanceversionexists">Get-PvsMaintenanceVersionExists</a></li>
-        
-            <li><a href="#get-pvsminimumlastautoadddevicenumber">Get-PvsMinimumLastAutoAddDeviceNumber</a></li>
-        
-            <li><a href="#get-pvsmounteddisk">Get-PvsMountedDisk</a></li>
-        
-            <li><a href="#get-pvsmounteddriveletter">Get-PvsMountedDriveLetter</a></li>
-        
-            <li><a href="#get-pvsnewdiskversion">Get-PvsNewDiskVersion</a></li>
-        
-            <li><a href="#get-pvsserver">Get-PvsServer</a></li>
-        
-            <li><a href="#get-pvsserverbiosbootstrap">Get-PvsServerBiosBootstrap</a></li>
-        
-            <li><a href="#get-pvsserverbootstrap">Get-PvsServerBootstrap</a></li>
-        
-            <li><a href="#get-pvsserverbootstrapname">Get-PvsServerBootstrapName</a></li>
-        
-            <li><a href="#get-pvsservercount">Get-PvsServerCount</a></li>
-        
-            <li><a href="#get-pvsserverinfo">Get-PvsServerInfo</a></li>
-        
-            <li><a href="#get-pvsservername">Get-PvsServerName</a></li>
-        
-            <li><a href="#get-pvsserverstatus">Get-PvsServerStatus</a></li>
-        
-            <li><a href="#get-pvsserverstore">Get-PvsServerStore</a></li>
-        
-            <li><a href="#get-pvsserverstoreactivedevicecount">Get-PvsServerStoreActiveDeviceCount</a></li>
-        
-            <li><a href="#get-pvssite">Get-PvsSite</a></li>
-        
-            <li><a href="#get-pvssiteview">Get-PvsSiteView</a></li>
-        
-            <li><a href="#get-pvsstore">Get-PvsStore</a></li>
-        
-            <li><a href="#get-pvsstorefreespace">Get-PvsStoreFreeSpace</a></li>
-        
-            <li><a href="#get-pvsstoresharedorserverpath">Get-PvsStoreSharedOrServerPath</a></li>
-        
-            <li><a href="#get-pvstask">Get-PvsTask</a></li>
-        
-            <li><a href="#get-pvstaskstatus">Get-PvsTaskStatus</a></li>
-        
-            <li><a href="#get-pvsundefineddisk">Get-PvsUndefinedDisk</a></li>
-        
-            <li><a href="#get-pvsupdatetask">Get-PvsUpdateTask</a></li>
-        
-            <li><a href="#get-pvsuploadceip">Get-PvsUploadCeip</a></li>
-        
-            <li><a href="#get-pvsversion">Get-PvsVersion</a></li>
-        
-            <li><a href="#get-pvsvirtualhostingpool">Get-PvsVirtualHostingPool</a></li>
-        
-            <li><a href="#get-pvsxdsite">Get-PvsXDSite</a></li>
-        
-            <li><a href="#grant-pvsauthgroup">Grant-PvsAuthGroup</a></li>
-        
-            <li><a href="#import-pvsdevices">Import-PvsDevices</a></li>
-        
-            <li><a href="#import-pvsdisk">Import-PvsDisk</a></li>
-        
-            <li><a href="#import-pvsoemlicenses">Import-PvsOemLicenses</a></li>
-        
-            <li><a href="#invoke-pvsactivatedevicemak">Invoke-PvsActivateDeviceMAK</a></li>
-        
-            <li><a href="#invoke-pvsmarkdown">Invoke-PvsMarkDown</a></li>
-        
-            <li><a href="#invoke-pvspromotediskversion">Invoke-PvsPromoteDiskVersion</a></li>
-        
-            <li><a href="#invoke-pvsrebalancedevices">Invoke-PvsRebalanceDevices</a></li>
-        
-            <li><a href="#invoke-pvsrevertdiskversion">Invoke-PvsRevertDiskVersion</a></li>
-        
-            <li><a href="#merge-pvsdisk">Merge-PvsDisk</a></li>
-        
-            <li><a href="#mount-pvsdisk">Mount-PvsDisk</a></li>
-        
-            <li><a href="#move-pvsdevicetocollection">Move-PvsDeviceToCollection</a></li>
-        
-            <li><a href="#move-pvsservertosite">Move-PvsServerToSite</a></li>
-        
-            <li><a href="#new-pvsauthgroup">New-PvsAuthGroup</a></li>
-        
-            <li><a href="#new-pvsceipdata">New-PvsCeipData</a></li>
-        
-            <li><a href="#new-pvscisdata">New-PvsCisData</a></li>
-        
-            <li><a href="#new-pvscollection">New-PvsCollection</a></li>
-        
-            <li><a href="#new-pvsdevice">New-PvsDevice</a></li>
-        
-            <li><a href="#new-pvsdevicewithpersonalvdisk">New-PvsDeviceWithPersonalvDisk</a></li>
-        
-            <li><a href="#new-pvsdirectory">New-PvsDirectory</a></li>
-        
-            <li><a href="#new-pvsdisklocator">New-PvsDiskLocator</a></li>
-        
-            <li><a href="#new-pvsdiskmaintenanceversion">New-PvsDiskMaintenanceVersion</a></li>
-        
-            <li><a href="#new-pvsdiskupdatedevice">New-PvsDiskUpdateDevice</a></li>
-        
-            <li><a href="#new-pvsfarmview">New-PvsFarmView</a></li>
-        
-            <li><a href="#new-pvsserver">New-PvsServer</a></li>
-        
-            <li><a href="#new-pvssite">New-PvsSite</a></li>
-        
-            <li><a href="#new-pvssiteview">New-PvsSiteView</a></li>
-        
-            <li><a href="#new-pvsstore">New-PvsStore</a></li>
-        
-            <li><a href="#new-pvsupdatetask">New-PvsUpdateTask</a></li>
-        
-            <li><a href="#new-pvsvirtualhostingpool">New-PvsVirtualHostingPool</a></li>
-        
-            <li><a href="#remove-pvsauthgroup">Remove-PvsAuthGroup</a></li>
-        
-            <li><a href="#remove-pvscollection">Remove-PvsCollection</a></li>
-        
-            <li><a href="#remove-pvsdevice">Remove-PvsDevice</a></li>
-        
-            <li><a href="#remove-pvsdevicediskcachefile">Remove-PvsDeviceDiskCacheFile</a></li>
-        
-            <li><a href="#remove-pvsdevicefromdomain">Remove-PvsDeviceFromDomain</a></li>
-        
-            <li><a href="#remove-pvsdevicefromview">Remove-PvsDeviceFromView</a></li>
-        
-            <li><a href="#remove-pvsdirectory">Remove-PvsDirectory</a></li>
-        
-            <li><a href="#remove-pvsdiskfromupdatetask">Remove-PvsDiskFromUpdateTask</a></li>
-        
-            <li><a href="#remove-pvsdisklocator">Remove-PvsDiskLocator</a></li>
-        
-            <li><a href="#remove-pvsdisklocatorfromdevice">Remove-PvsDiskLocatorFromDevice</a></li>
-        
-            <li><a href="#remove-pvsdiskupdatedevice">Remove-PvsDiskUpdateDevice</a></li>
-        
-            <li><a href="#remove-pvsdiskversion">Remove-PvsDiskVersion</a></li>
-        
-            <li><a href="#remove-pvsfarmview">Remove-PvsFarmView</a></li>
-        
-            <li><a href="#remove-pvsserver">Remove-PvsServer</a></li>
-        
-            <li><a href="#remove-pvsserverstore">Remove-PvsServerStore</a></li>
-        
-            <li><a href="#remove-pvssite">Remove-PvsSite</a></li>
-        
-            <li><a href="#remove-pvssiteview">Remove-PvsSiteView</a></li>
-        
-            <li><a href="#remove-pvsstore">Remove-PvsStore</a></li>
-        
-            <li><a href="#remove-pvsupdatetask">Remove-PvsUpdateTask</a></li>
-        
-            <li><a href="#remove-pvsvirtualhostingpool">Remove-PvsVirtualHostingPool</a></li>
-        
-            <li><a href="#reset-pvsdatabase">Reset-PvsDatabase</a></li>
-        
-            <li><a href="#reset-pvsdevicefordomain">Reset-PvsDeviceForDomain</a></li>
-        
-            <li><a href="#restart-pvsstreamservice">Restart-PvsStreamService</a></li>
-        
-            <li><a href="#revoke-pvsauthgroup">Revoke-PvsAuthGroup</a></li>
-        
-            <li><a href="#set-pvsauthgroup">Set-PvsAuthGroup</a></li>
-        
-            <li><a href="#set-pvsceipdata">Set-PvsCeipData</a></li>
-        
-            <li><a href="#set-pvscisdata">Set-PvsCisData</a></li>
-        
-            <li><a href="#set-pvscollection">Set-PvsCollection</a></li>
-        
-            <li><a href="#set-pvsconnection_1">Set-PvsConnection</a></li>
-        
-            <li><a href="#set-pvsdevice">Set-PvsDevice</a></li>
-        
-            <li><a href="#set-pvsdevicebootstrap">Set-PvsDeviceBootstrap</a></li>
-        
-            <li><a href="#set-pvsdevicepersonality">Set-PvsDevicePersonality</a></li>
-        
-            <li><a href="#set-pvsdisk">Set-PvsDisk</a></li>
-        
-            <li><a href="#set-pvsdisklocator">Set-PvsDiskLocator</a></li>
-        
-            <li><a href="#set-pvsdiskupdatedevice">Set-PvsDiskUpdateDevice</a></li>
-        
-            <li><a href="#set-pvsdiskversion">Set-PvsDiskVersion</a></li>
-        
-            <li><a href="#set-pvsfarm">Set-PvsFarm</a></li>
-        
-            <li><a href="#set-pvsfarmview">Set-PvsFarmView</a></li>
-        
-            <li><a href="#set-pvsoverrideversion">Set-PvsOverrideVersion</a></li>
-        
-            <li><a href="#set-pvsserver">Set-PvsServer</a></li>
-        
-            <li><a href="#set-pvsserverbiosbootstrap">Set-PvsServerBiosBootstrap</a></li>
-        
-            <li><a href="#set-pvsserverbootstrap">Set-PvsServerBootstrap</a></li>
-        
-            <li><a href="#set-pvsserverstore">Set-PvsServerStore</a></li>
-        
-            <li><a href="#set-pvssite">Set-PvsSite</a></li>
-        
-            <li><a href="#set-pvssiteview">Set-PvsSiteView</a></li>
-        
-            <li><a href="#set-pvsstore">Set-PvsStore</a></li>
-        
-            <li><a href="#set-pvsupdatetask">Set-PvsUpdateTask</a></li>
-        
-            <li><a href="#set-pvsvirtualhostingpool">Set-PvsVirtualHostingPool</a></li>
-        
-            <li><a href="#set-pvsxdsite">Set-PvsXDSite</a></li>
-        
-            <li><a href="#start-pvsautoupdate">Start-PvsAutoUpdate</a></li>
-        
-            <li><a href="#start-pvscreatedisk">Start-PvsCreateDisk</a></li>
-        
-            <li><a href="#start-pvsdeviceboot">Start-PvsDeviceBoot</a></li>
-        
-            <li><a href="#start-pvsdevicedisktempversionmode">Start-PvsDeviceDiskTempVersionMode</a></li>
-        
-            <li><a href="#start-pvsdevicereboot">Start-PvsDeviceReboot</a></li>
-        
-            <li><a href="#start-pvsdeviceshutdown">Start-PvsDeviceShutdown</a></li>
-        
-            <li><a href="#start-pvsdeviceupdatebdm">Start-PvsDeviceUpdateBdm</a></li>
-        
-            <li><a href="#start-pvsdisplaymessage">Start-PvsDisplayMessage</a></li>
-        
-            <li><a href="#start-pvsreportbug">Start-PvsReportBug</a></li>
-        
-            <li><a href="#start-pvsstreamservice">Start-PvsStreamService</a></li>
-        
-            <li><a href="#start-pvsupdatetask">Start-PvsUpdateTask</a></li>
-        
-            <li><a href="#stop-pvscreatedisk">Stop-PvsCreateDisk</a></li>
-        
-            <li><a href="#stop-pvsdevicedisktempversionmode">Stop-PvsDeviceDiskTempVersionMode</a></li>
-        
-            <li><a href="#stop-pvsstreamservice">Stop-PvsStreamService</a></li>
-        
-            <li><a href="#stop-pvstask">Stop-PvsTask</a></li>
-        
-            <li><a href="#stop-pvsupdatetask">Stop-PvsUpdateTask</a></li>
-        
-            <li><a href="#test-pvsdirectory">Test-PvsDirectory</a></li>
-        
-            <li><a href="#unlock-pvsalldisk">Unlock-PvsAllDisk</a></li>
-        
-            <li><a href="#unlock-pvsdisk">Unlock-PvsDisk</a></li>
-        
-            <li><a href="#update-pvsinventory">Update-PvsInventory</a></li>
-        
-    
-    </ul>
-</div>
-      </div>
-      &nbsp;
-    </nav>
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href=".">Index</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#introduction" style="padding:0px;position: relative;">&nbsp;Introduction</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-the-powershell-programmer-interface-withobjects" style="padding:0px;position: relative;">Using the PowerShell Programmer Interface withObjects</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#installation-of-powershell-snap-in" style="padding:0px;position: relative;">&nbsp;Installation of PowerShell Snap-In</a></li>
+                
+                    <li><a class="toctree-l4" href="#registration-of-mclipssnapindll-usingimport-module" style="padding:0px;position: relative;">Registration of McliPSSnapIn.dll usingImport-Module</a></li>
+                
+                    <li><a class="toctree-l4" href="#registration-of-citrixpvssnapindll-usingadd-pssnapin" style="padding:0px;position: relative;">Registration of Citrix.PVS.SnapIn.dll usingAdd-PSSnapin</a></li>
+                
+                    <li><a class="toctree-l4" href="#alternative-registration-of-citrixpvssnapindllin-powershell" style="padding:0px;position: relative;">Alternative Registration of Citrix.PVS.SnapIn.dllin PowerShell</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#uninstall-of-powershell-snap-in" style="padding:0px;position: relative;">&nbsp;Uninstall of PowerShell Snap-In</a></li>
+                
+                    <li><a class="toctree-l4" href="#unregister-of-citrixpvssnapindll" style="padding:0px;position: relative;">Unregister of Citrix.PVS.SnapIn.dll</a></li>
+                
+                    <li><a class="toctree-l4" href="#alternative-unregister-of-citrixpvssnapindll-inpowershell" style="padding:0px;position: relative;">Alternative Unregister of Citrix.PVS.SnapIn.dll inPowerShell</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#setup-of-the-soap-server-communication" style="padding:0px;position: relative;">&nbsp;Setup of the SOAP Server Communication</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsconnection" style="padding:0px;position: relative;">Set-PvsConnection</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#command-specific-help" style="padding:0px;position: relative;">&nbsp;Command Specific Help</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#error-handling" style="padding:0px;position: relative;">&nbsp;Error Handling</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#short-cmdlet-list" style="padding:0px;position: relative;">&nbsp;Short cmdlet list</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#cmdlet-by-object-type" style="padding:0px;position: relative;">&nbsp;Cmdlet by Object Type</a></li>
+                
+                    <li><a class="toctree-l4" href="#many" style="padding:0px;position: relative;">Many</a></li>
+                
+                    <li><a class="toctree-l4" href="#authgroup" style="padding:0px;position: relative;">AuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#ceipdata" style="padding:0px;position: relative;">CeipData</a></li>
+                
+                    <li><a class="toctree-l4" href="#cisdata" style="padding:0px;position: relative;">CisData</a></li>
+                
+                    <li><a class="toctree-l4" href="#collection" style="padding:0px;position: relative;">Collection</a></li>
+                
+                    <li><a class="toctree-l4" href="#device" style="padding:0px;position: relative;">Device</a></li>
+                
+                    <li><a class="toctree-l4" href="#disk" style="padding:0px;position: relative;">Disk</a></li>
+                
+                    <li><a class="toctree-l4" href="#disklocator" style="padding:0px;position: relative;">DiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#farm" style="padding:0px;position: relative;">Farm</a></li>
+                
+                    <li><a class="toctree-l4" href="#farmview" style="padding:0px;position: relative;">FarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#server" style="padding:0px;position: relative;">Server</a></li>
+                
+                    <li><a class="toctree-l4" href="#site" style="padding:0px;position: relative;">Site</a></li>
+                
+                    <li><a class="toctree-l4" href="#siteview" style="padding:0px;position: relative;">SiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#store" style="padding:0px;position: relative;">Store</a></li>
+                
+                    <li><a class="toctree-l4" href="#system" style="padding:0px;position: relative;">System</a></li>
+                
+                    <li><a class="toctree-l4" href="#task" style="padding:0px;position: relative;">Task</a></li>
+                
+                    <li><a class="toctree-l4" href="#updatetask" style="padding:0px;position: relative;">UpdateTask</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#error-codes" style="padding:0px;position: relative;">&nbsp;Error codes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#objects-in-the-citrixpvssnapin-namespace" style="padding:0px;position: relative;">&nbsp;Objects, in the Citrix.PVS.SnapIn Namespace</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsadaccount" style="padding:0px;position: relative;">PvsADAccount</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsauditaction" style="padding:0px;position: relative;">PvsAuditAction</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsauditactionparameter" style="padding:0px;position: relative;">PvsAuditActionParameter</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsauditactionproperty" style="padding:0px;position: relative;">PvsAuditActionProperty</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsaudittrail" style="padding:0px;position: relative;">PvsAuditTrail</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsauthgroup" style="padding:0px;position: relative;">PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsauthgroupusage" style="padding:0px;position: relative;">PvsAuthGroupUsage</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsceipdata" style="padding:0px;position: relative;">PvsCeipData</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvscisdata" style="padding:0px;position: relative;">PvsCisData</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvscollection" style="padding:0px;position: relative;">PvsCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsconnection" style="padding:0px;position: relative;">PvsConnection</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevice" style="padding:0px;position: relative;">PvsDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicebootstrap" style="padding:0px;position: relative;">PvsDeviceBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicebootstraplist" style="padding:0px;position: relative;">PvsDeviceBootstrapList</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicedisktempversion" style="padding:0px;position: relative;">PvsDeviceDiskTempVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdeviceinfo" style="padding:0px;position: relative;">PvsDeviceInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicepersonality" style="padding:0px;position: relative;">PvsDevicePersonality</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicepersonalitylist" style="padding:0px;position: relative;">PvsDevicePersonalityList</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdevicestatus" style="padding:0px;position: relative;">PvsDeviceStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdisk" style="padding:0px;position: relative;">PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdiskinfo" style="padding:0px;position: relative;">PvsDiskInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdiskinventory" style="padding:0px;position: relative;">PvsDiskInventory</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdisklocator" style="padding:0px;position: relative;">PvsDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdisklocatorlock" style="padding:0px;position: relative;">PvsDiskLocatorLock</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdiskupdatedevice" style="padding:0px;position: relative;">PvsDiskUpdateDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdiskupdatestatus" style="padding:0px;position: relative;">PvsDiskUpdateStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsdiskversion" style="padding:0px;position: relative;">PvsDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsfarm" style="padding:0px;position: relative;">PvsFarm</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsfarmview" style="padding:0px;position: relative;">PvsFarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsgroup" style="padding:0px;position: relative;">PvsGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvslocalserver" style="padding:0px;position: relative;">PvsLocalServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsnewdiskversion" style="padding:0px;position: relative;">PvsNewDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsphysicaladdress" style="padding:0px;position: relative;">PvsPhysicalAddress</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserver" style="padding:0px;position: relative;">PvsServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverbiosbootstrap" style="padding:0px;position: relative;">PvsServerBiosBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverbootstrap" style="padding:0px;position: relative;">PvsServerBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverbootstrapname" style="padding:0px;position: relative;">PvsServerBootstrapName</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverinfo" style="padding:0px;position: relative;">PvsServerInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverstatus" style="padding:0px;position: relative;">PvsServerStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsserverstore" style="padding:0px;position: relative;">PvsServerStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvssite" style="padding:0px;position: relative;">PvsSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvssiteview" style="padding:0px;position: relative;">PvsSiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsstore" style="padding:0px;position: relative;">PvsStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsstoresharedorserverpath" style="padding:0px;position: relative;">PvsStoreSharedOrServerPath</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvstask" style="padding:0px;position: relative;">PvsTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsundefineddisk" style="padding:0px;position: relative;">PvsUndefinedDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsupdatetask" style="padding:0px;position: relative;">PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsversion" style="padding:0px;position: relative;">PvsVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsvirtualhostingpool" style="padding:0px;position: relative;">PvsVirtualHostingPool</a></li>
+                
+                    <li><a class="toctree-l4" href="#pvsxdsite" style="padding:0px;position: relative;">PvsXDSite</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#cmdlets" style="padding:0px;position: relative;">&nbsp;Cmdlets</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-pvsdevicetodomain" style="padding:0px;position: relative;">Add-PvsDeviceToDomain</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-pvsdevicetoview" style="padding:0px;position: relative;">Add-PvsDeviceToView</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-pvsdisklocatortodevice" style="padding:0px;position: relative;">Add-PvsDiskLocatorToDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-pvsdisktoupdatetask" style="padding:0px;position: relative;">Add-PvsDiskToUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-pvsdiskversion" style="padding:0px;position: relative;">Add-PvsDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#clear-pvsconnection" style="padding:0px;position: relative;">Clear-PvsConnection</a></li>
+                
+                    <li><a class="toctree-l4" href="#clear-pvstask" style="padding:0px;position: relative;">Clear-PvsTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#copy-pvsdeviceproperties" style="padding:0px;position: relative;">Copy-PvsDeviceProperties</a></li>
+                
+                    <li><a class="toctree-l4" href="#copy-pvsdiskproperties" style="padding:0px;position: relative;">Copy-PvsDiskProperties</a></li>
+                
+                    <li><a class="toctree-l4" href="#copy-pvsserverproperties" style="padding:0px;position: relative;">Copy-PvsServerProperties</a></li>
+                
+                    <li><a class="toctree-l4" href="#disable-pvsdevicedisklocator" style="padding:0px;position: relative;">Disable-PvsDeviceDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#dismount-pvsdisk" style="padding:0px;position: relative;">Dismount-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#enable-pvsdevicedisklocator" style="padding:0px;position: relative;">Enable-PvsDeviceDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#export-pvsaudittrail" style="padding:0px;position: relative;">Export-PvsAuditTrail</a></li>
+                
+                    <li><a class="toctree-l4" href="#export-pvsdisk" style="padding:0px;position: relative;">Export-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#export-pvsoemlicenses" style="padding:0px;position: relative;">Export-PvsOemLicenses</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsadaccount" style="padding:0px;position: relative;">Get-PvsADAccount</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsauditactionparameter" style="padding:0px;position: relative;">Get-PvsAuditActionParameter</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsauditactionproperty" style="padding:0px;position: relative;">Get-PvsAuditActionProperty</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsauditactionsibling" style="padding:0px;position: relative;">Get-PvsAuditActionSibling</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsaudittrail" style="padding:0px;position: relative;">Get-PvsAuditTrail</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsauthgroup" style="padding:0px;position: relative;">Get-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsauthgroupusage" style="padding:0px;position: relative;">Get-PvsAuthGroupUsage</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsceipdata" style="padding:0px;position: relative;">Get-PvsCeipData</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvscisdata" style="padding:0px;position: relative;">Get-PvsCisData</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvscollection" style="padding:0px;position: relative;">Get-PvsCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsconnection" style="padding:0px;position: relative;">Get-PvsConnection</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvscreatediskstatus" style="padding:0px;position: relative;">Get-PvsCreateDiskStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevice" style="padding:0px;position: relative;">Get-PvsDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicebootstrap" style="padding:0px;position: relative;">Get-PvsDeviceBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicecount" style="padding:0px;position: relative;">Get-PvsDeviceCount</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicedisklocatorenabled" style="padding:0px;position: relative;">Get-PvsDeviceDiskLocatorEnabled</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicedisktempversion" style="padding:0px;position: relative;">Get-PvsDeviceDiskTempVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdeviceinfo" style="padding:0px;position: relative;">Get-PvsDeviceInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicepersonality" style="padding:0px;position: relative;">Get-PvsDevicePersonality</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdevicestatus" style="padding:0px;position: relative;">Get-PvsDeviceStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdirectory" style="padding:0px;position: relative;">Get-PvsDirectory</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdisk" style="padding:0px;position: relative;">Get-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdiskinfo" style="padding:0px;position: relative;">Get-PvsDiskInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdiskinventory" style="padding:0px;position: relative;">Get-PvsDiskInventory</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdisklocator" style="padding:0px;position: relative;">Get-PvsDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdisklocatorcount" style="padding:0px;position: relative;">Get-PvsDiskLocatorCount</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdisklocatorlock" style="padding:0px;position: relative;">Get-PvsDiskLocatorLock</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdiskupdatedevice" style="padding:0px;position: relative;">Get-PvsDiskUpdateDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdiskupdatestatus" style="padding:0px;position: relative;">Get-PvsDiskUpdateStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsdiskversion" style="padding:0px;position: relative;">Get-PvsDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsexists" style="padding:0px;position: relative;">Get-PvsExists</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsfarm" style="padding:0px;position: relative;">Get-PvsFarm</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsfarmview" style="padding:0px;position: relative;">Get-PvsFarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsgroup" style="padding:0px;position: relative;">Get-PvsGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvslocalserver" style="padding:0px;position: relative;">Get-PvsLocalServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsmaintenanceversionexists" style="padding:0px;position: relative;">Get-PvsMaintenanceVersionExists</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsminimumlastautoadddevicenumber" style="padding:0px;position: relative;">Get-PvsMinimumLastAutoAddDeviceNumber</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsmounteddisk" style="padding:0px;position: relative;">Get-PvsMountedDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsmounteddriveletter" style="padding:0px;position: relative;">Get-PvsMountedDriveLetter</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsnewdiskversion" style="padding:0px;position: relative;">Get-PvsNewDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserver" style="padding:0px;position: relative;">Get-PvsServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverbiosbootstrap" style="padding:0px;position: relative;">Get-PvsServerBiosBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverbootstrap" style="padding:0px;position: relative;">Get-PvsServerBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverbootstrapname" style="padding:0px;position: relative;">Get-PvsServerBootstrapName</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsservercount" style="padding:0px;position: relative;">Get-PvsServerCount</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverinfo" style="padding:0px;position: relative;">Get-PvsServerInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsservername" style="padding:0px;position: relative;">Get-PvsServerName</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverstatus" style="padding:0px;position: relative;">Get-PvsServerStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverstore" style="padding:0px;position: relative;">Get-PvsServerStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsserverstoreactivedevicecount" style="padding:0px;position: relative;">Get-PvsServerStoreActiveDeviceCount</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvssite" style="padding:0px;position: relative;">Get-PvsSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvssiteview" style="padding:0px;position: relative;">Get-PvsSiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsstore" style="padding:0px;position: relative;">Get-PvsStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsstorefreespace" style="padding:0px;position: relative;">Get-PvsStoreFreeSpace</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsstoresharedorserverpath" style="padding:0px;position: relative;">Get-PvsStoreSharedOrServerPath</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvstask" style="padding:0px;position: relative;">Get-PvsTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvstaskstatus" style="padding:0px;position: relative;">Get-PvsTaskStatus</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsundefineddisk" style="padding:0px;position: relative;">Get-PvsUndefinedDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsupdatetask" style="padding:0px;position: relative;">Get-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsuploadceip" style="padding:0px;position: relative;">Get-PvsUploadCeip</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsversion" style="padding:0px;position: relative;">Get-PvsVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsvirtualhostingpool" style="padding:0px;position: relative;">Get-PvsVirtualHostingPool</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-pvsxdsite" style="padding:0px;position: relative;">Get-PvsXDSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#grant-pvsauthgroup" style="padding:0px;position: relative;">Grant-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#import-pvsdevices" style="padding:0px;position: relative;">Import-PvsDevices</a></li>
+                
+                    <li><a class="toctree-l4" href="#import-pvsdisk" style="padding:0px;position: relative;">Import-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#import-pvsoemlicenses" style="padding:0px;position: relative;">Import-PvsOemLicenses</a></li>
+                
+                    <li><a class="toctree-l4" href="#invoke-pvsactivatedevicemak" style="padding:0px;position: relative;">Invoke-PvsActivateDeviceMAK</a></li>
+                
+                    <li><a class="toctree-l4" href="#invoke-pvsmarkdown" style="padding:0px;position: relative;">Invoke-PvsMarkDown</a></li>
+                
+                    <li><a class="toctree-l4" href="#invoke-pvspromotediskversion" style="padding:0px;position: relative;">Invoke-PvsPromoteDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#invoke-pvsrebalancedevices" style="padding:0px;position: relative;">Invoke-PvsRebalanceDevices</a></li>
+                
+                    <li><a class="toctree-l4" href="#invoke-pvsrevertdiskversion" style="padding:0px;position: relative;">Invoke-PvsRevertDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#merge-pvsdisk" style="padding:0px;position: relative;">Merge-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#mount-pvsdisk" style="padding:0px;position: relative;">Mount-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#move-pvsdevicetocollection" style="padding:0px;position: relative;">Move-PvsDeviceToCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#move-pvsservertosite" style="padding:0px;position: relative;">Move-PvsServerToSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsauthgroup" style="padding:0px;position: relative;">New-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsceipdata" style="padding:0px;position: relative;">New-PvsCeipData</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvscisdata" style="padding:0px;position: relative;">New-PvsCisData</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvscollection" style="padding:0px;position: relative;">New-PvsCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdevice" style="padding:0px;position: relative;">New-PvsDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdevicewithpersonalvdisk" style="padding:0px;position: relative;">New-PvsDeviceWithPersonalvDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdirectory" style="padding:0px;position: relative;">New-PvsDirectory</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdisklocator" style="padding:0px;position: relative;">New-PvsDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdiskmaintenanceversion" style="padding:0px;position: relative;">New-PvsDiskMaintenanceVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsdiskupdatedevice" style="padding:0px;position: relative;">New-PvsDiskUpdateDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsfarmview" style="padding:0px;position: relative;">New-PvsFarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsserver" style="padding:0px;position: relative;">New-PvsServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvssite" style="padding:0px;position: relative;">New-PvsSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvssiteview" style="padding:0px;position: relative;">New-PvsSiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsstore" style="padding:0px;position: relative;">New-PvsStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsupdatetask" style="padding:0px;position: relative;">New-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-pvsvirtualhostingpool" style="padding:0px;position: relative;">New-PvsVirtualHostingPool</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsauthgroup" style="padding:0px;position: relative;">Remove-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvscollection" style="padding:0px;position: relative;">Remove-PvsCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdevice" style="padding:0px;position: relative;">Remove-PvsDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdevicediskcachefile" style="padding:0px;position: relative;">Remove-PvsDeviceDiskCacheFile</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdevicefromdomain" style="padding:0px;position: relative;">Remove-PvsDeviceFromDomain</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdevicefromview" style="padding:0px;position: relative;">Remove-PvsDeviceFromView</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdirectory" style="padding:0px;position: relative;">Remove-PvsDirectory</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdiskfromupdatetask" style="padding:0px;position: relative;">Remove-PvsDiskFromUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdisklocator" style="padding:0px;position: relative;">Remove-PvsDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdisklocatorfromdevice" style="padding:0px;position: relative;">Remove-PvsDiskLocatorFromDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdiskupdatedevice" style="padding:0px;position: relative;">Remove-PvsDiskUpdateDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsdiskversion" style="padding:0px;position: relative;">Remove-PvsDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsfarmview" style="padding:0px;position: relative;">Remove-PvsFarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsserver" style="padding:0px;position: relative;">Remove-PvsServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsserverstore" style="padding:0px;position: relative;">Remove-PvsServerStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvssite" style="padding:0px;position: relative;">Remove-PvsSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvssiteview" style="padding:0px;position: relative;">Remove-PvsSiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsstore" style="padding:0px;position: relative;">Remove-PvsStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsupdatetask" style="padding:0px;position: relative;">Remove-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-pvsvirtualhostingpool" style="padding:0px;position: relative;">Remove-PvsVirtualHostingPool</a></li>
+                
+                    <li><a class="toctree-l4" href="#reset-pvsdatabase" style="padding:0px;position: relative;">Reset-PvsDatabase</a></li>
+                
+                    <li><a class="toctree-l4" href="#reset-pvsdevicefordomain" style="padding:0px;position: relative;">Reset-PvsDeviceForDomain</a></li>
+                
+                    <li><a class="toctree-l4" href="#restart-pvsstreamservice" style="padding:0px;position: relative;">Restart-PvsStreamService</a></li>
+                
+                    <li><a class="toctree-l4" href="#revoke-pvsauthgroup" style="padding:0px;position: relative;">Revoke-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsauthgroup" style="padding:0px;position: relative;">Set-PvsAuthGroup</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsceipdata" style="padding:0px;position: relative;">Set-PvsCeipData</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvscisdata" style="padding:0px;position: relative;">Set-PvsCisData</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvscollection" style="padding:0px;position: relative;">Set-PvsCollection</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsconnection_1" style="padding:0px;position: relative;">Set-PvsConnection</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdevice" style="padding:0px;position: relative;">Set-PvsDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdevicebootstrap" style="padding:0px;position: relative;">Set-PvsDeviceBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdevicepersonality" style="padding:0px;position: relative;">Set-PvsDevicePersonality</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdisk" style="padding:0px;position: relative;">Set-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdisklocator" style="padding:0px;position: relative;">Set-PvsDiskLocator</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdiskupdatedevice" style="padding:0px;position: relative;">Set-PvsDiskUpdateDevice</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsdiskversion" style="padding:0px;position: relative;">Set-PvsDiskVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsfarm" style="padding:0px;position: relative;">Set-PvsFarm</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsfarmview" style="padding:0px;position: relative;">Set-PvsFarmView</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsoverrideversion" style="padding:0px;position: relative;">Set-PvsOverrideVersion</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsserver" style="padding:0px;position: relative;">Set-PvsServer</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsserverbiosbootstrap" style="padding:0px;position: relative;">Set-PvsServerBiosBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsserverbootstrap" style="padding:0px;position: relative;">Set-PvsServerBootstrap</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsserverstore" style="padding:0px;position: relative;">Set-PvsServerStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvssite" style="padding:0px;position: relative;">Set-PvsSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvssiteview" style="padding:0px;position: relative;">Set-PvsSiteView</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsstore" style="padding:0px;position: relative;">Set-PvsStore</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsupdatetask" style="padding:0px;position: relative;">Set-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsvirtualhostingpool" style="padding:0px;position: relative;">Set-PvsVirtualHostingPool</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-pvsxdsite" style="padding:0px;position: relative;">Set-PvsXDSite</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsautoupdate" style="padding:0px;position: relative;">Start-PvsAutoUpdate</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvscreatedisk" style="padding:0px;position: relative;">Start-PvsCreateDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdeviceboot" style="padding:0px;position: relative;">Start-PvsDeviceBoot</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdevicedisktempversionmode" style="padding:0px;position: relative;">Start-PvsDeviceDiskTempVersionMode</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdevicereboot" style="padding:0px;position: relative;">Start-PvsDeviceReboot</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdeviceshutdown" style="padding:0px;position: relative;">Start-PvsDeviceShutdown</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdeviceupdatebdm" style="padding:0px;position: relative;">Start-PvsDeviceUpdateBdm</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsdisplaymessage" style="padding:0px;position: relative;">Start-PvsDisplayMessage</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsreportbug" style="padding:0px;position: relative;">Start-PvsReportBug</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsstreamservice" style="padding:0px;position: relative;">Start-PvsStreamService</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-pvsupdatetask" style="padding:0px;position: relative;">Start-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#stop-pvscreatedisk" style="padding:0px;position: relative;">Stop-PvsCreateDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#stop-pvsdevicedisktempversionmode" style="padding:0px;position: relative;">Stop-PvsDeviceDiskTempVersionMode</a></li>
+                
+                    <li><a class="toctree-l4" href="#stop-pvsstreamservice" style="padding:0px;position: relative;">Stop-PvsStreamService</a></li>
+                
+                    <li><a class="toctree-l4" href="#stop-pvstask" style="padding:0px;position: relative;">Stop-PvsTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#stop-pvsupdatetask" style="padding:0px;position: relative;">Stop-PvsUpdateTask</a></li>
+                
+                    <li><a class="toctree-l4" href="#test-pvsdirectory" style="padding:0px;position: relative;">Test-PvsDirectory</a></li>
+                
+                    <li><a class="toctree-l4" href="#unlock-pvsalldisk" style="padding:0px;position: relative;">Unlock-PvsAllDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#unlock-pvsdisk" style="padding:0px;position: relative;">Unlock-PvsDisk</a></li>
+                
+                    <li><a class="toctree-l4" href="#update-pvsinventory" style="padding:0px;position: relative;">Update-PvsInventory</a></li>
+                
+            
+            </ul>
+        
+    </li>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
 
-      
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".">Docs</a> &raquo;</li>
     
@@ -644,10 +647,22 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
   </ul>
   <hr/>
 </div> -->
-          <div role="main">
-            <div class="section">
-             
-                <p></p>
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <p></p>
 
 <p><span style="font-size:20.0pt;line-height:105%"></span></p>
 
@@ -15897,20 +15912,19 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <h4 id="example-1-update-pvsinventory"><a class="toclink" href="#example-1-update-pvsinventory">EXAMPLE 1: Update-PvsInventory</a></h4>
 <p style="margin-left:2.0in;text-indent:-1.4in"><span style="font-size:10.0pt;font-family:"Courier New"">Update-PvsInventory</span></p>
 
-<p style="margin-left:99.0pt;text-indent:-85.5pt"></p>
-              
+<p style="margin-left:99.0pt;text-indent:-85.5pt"></p> 
+
+                </div>
+              </div>
 
             </div>
           </div>
 
-        </div>
+        </section>
+
       </div>
-
-    </section>
-
-  </div>
-
-<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -15927,10 +15941,11 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 	</div>
 </div>-->
 
-</body>
+  </body>
+
 </html>
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-03-21 05:54:15
+Build Date UTC : 2017-05-11 15:28:02
 -->
