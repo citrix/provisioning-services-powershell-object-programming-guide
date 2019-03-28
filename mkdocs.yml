@@ -1,13 +1,10 @@
 site_name: Citrix Provisioning Services 7.12 PowerShell with Objects Programmer’s Guide
 site_description: Programmer's Guide for Citrix Provisioning Services 7.12 with Objects
 theme_dir: citrix-sdk
-#theme: mkdocs
-#repo_url: https://github.com/ajitchelat/AppDNA-SDK.git
 markdown_extensions:
   - admonition
   - codehilite
-  - toc:
-     anchorlink: True
+  - toc
 
 pages:
 - Index: index.md
