@@ -1,5 +1,5 @@
-site_name: Citrix Provisioning Services 7.12 PowerShell with Objects Programmer’s Guide
-site_description: Programmer's Guide for Citrix Provisioning Services 7.12 with Objects
+site_name: Citrix Provisioning Services 1903 PowerShell with Objects Programmer’s Guide
+site_description: Programmer's Guide for Citrix Provisioning Services 1903 with Objects
 theme_dir: citrix-sdk
 markdown_extensions:
   - admonition
