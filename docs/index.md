@@ -1,4 +1,4 @@
-#Citrix Provisioning Services 1903 PowerShell with Objects Programmer’s Guide
+# Citrix Provisioning Services 1903 PowerShell with Objects Programmer’s Guide
 
 <p>Use Provisioning Services’ programming interfaces to manageyour implementation from a command line or from scripts. Only users withcorrect administrative privileges can use programming commands.Non-administrators, that do not have elevated privileges and attempt to use thesecommands, will receive the ‘Invalid access’ message.</p>
 
@@ -14,7 +14,7 @@
 
 <p>This document provides the information needed to use thisinterface.</p>
 
-##Using the PowerShell Programmer Interface withObjects<a name="_Toc464196015"></a>
+## Using the PowerShell Programmer Interface withObjects<a name="_Toc464196015"></a>
 
 <p>Use the information that follows to manage a ProvisioningService’s implementation from the PowerShell Interface with Objects.</p>
 
