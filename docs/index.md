@@ -1,6 +1,6 @@
-# Citrix Provisioning Services 1903 PowerShell with Objects Programmer’s Guide
+# Citrix Provisioning 1906 PowerShell with Objects Programmer’s Guide
 
-<p>Use Provisioning Services’ programming interfaces to manageyour implementation from a command line or from scripts. Only users withcorrect administrative privileges can use programming commands.Non-administrators, that do not have elevated privileges and attempt to use thesecommands, will receive the ‘Invalid access’ message.</p>
+<p>Use Provisioning programming interfaces to manage your implementation from a command line or from scripts. Only users with correct administrative privileges can use programming commands.Non-administrators, that do not have elevated privileges and attempt to use these commands, will receive the ‘Invalid access’ message.</p>
 
 <p>Four different programming interfaces exist:</p>
 
@@ -12,7 +12,7 @@
 
 <p style="margin-left:.25in;text-indent:-.25in"><span style="font-family:Symbol">·<span style="font:7.0pt "Times New Roman""></span></span>PowerShell Programmer Interface (Deprecated)</p>
 
-<p>This document provides the information needed to use thisinterface.</p>
+<p>This document provides the information needed to use this interface.</p>
 
 ## Using the PowerShell Programmer Interface withObjects<a name="_Toc464196015"></a>
 
@@ -20,17 +20,17 @@
 
 #Installation of PowerShell Snap-In<a name="_Toc464196016"></a>
 
-<p>The PowerShell snap-in (Citrix.PVS.SnapIn.dll) can beinstalled using the Provisioning Server Console install.</p>
+<p>The PowerShell snap-in (Citrix.PVS.SnapIn.dll) can be installed using the Provisioning Server Console install.</p>
 
 ##Registration of McliPSSnapIn.dll usingImport-Module<a name="_Toc464196017"></a>
 
-<p>If the snap-in later needs to be registered in PowerShell,this can be manually done by running one of the following command inPowerShell. The path where the Citrix.PVS.SnapIn.dll is installed needs to beused.</p>
+<p>If the snap-in later needs to be registered in PowerShell,this can be manually done by running one of the following command inPowerShell. The path where the Citrix.PVS.SnapIn.dll is installed needs to be used.</p>
 
 <p>Import-Module “path\Citrix.PVS.SnapIn.dll”</p>
 
 ##Registration of Citrix.PVS.SnapIn.dll usingAdd-PSSnapin<a name="_Toc464196018"></a>
 
-<p>If the snap-in later needs to be registered in PowerShell,this can be manually done by running one of the following commands at the DOScommand prompt. After the command is run and PowerShell is started, the snap-inneeds to be added using the command “Add-PSSnapin -Name Citrix.PVS.SnapIn”.</p>
+<p>If the snap-in later needs to be registered in PowerShell,this can be manually done by running one of the following commands at the DOS command prompt. After the command is run and PowerShell is started, the snap-in needs to be added using the command “Add-PSSnapin -Name Citrix.PVS.SnapIn”.</p>
 
 ###64-bit Registration<a name="_Toc464196019"></a>
 
@@ -42,7 +42,7 @@
 
 ##Alternative Registration of Citrix.PVS.SnapIn.dllin PowerShell<a name="_Toc464196021"></a>
 
-<p>Another way to register is by running one of the followingcommands at the PowerShell command prompt:</p>
+<p>Another way to register is by running one of the following commands at the PowerShell command prompt:</p>
 
 ###64-bit Registration in PowerShell<a name="_Toc464196022"></a>
 
@@ -2326,6 +2326,8 @@ string Status: 1 or 2 numbers in the format n,n. They are the number of retries 
 
 Read/Write Fields
 
+bool AccelerateOfficeActivation: Run script to activate office automatically.
+
 bool ActivationDateEnabled: Use activation date to activate image when set to true. Default false
 
 DateTime ActiveDate: Date to activate the disk if AutoUpdateEnabled and activationDateEnabled are true. Has the date. Empty when the AutoUpdateEnabled or activationDateEnabled are false.
@@ -2393,6 +2395,8 @@ uint VhdBlockSize: Block size in KB. For VHD it is only used with Dynamic type. 
 ## PvsDiskInfo
 
 Read-Only Fields
+
+bool AccelerateOfficeActivation: Run script to activate office automatically.
 
 bool ActivationDateEnabled: Use activation date to activate image when set to true. Default false
 
@@ -2924,7 +2928,7 @@ uint ThreadsPerPort: Number of worker threads per IO port. Required that (thread
 
 uint UnusedDbConnectionTimeout: Interval, in number of seconds, a connection should go unused before it is to be released. Min=0, Max=32767, Default=300
 
-uint VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+uint VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 Read-Only Fields
 
@@ -3154,7 +3158,7 @@ uint ThreadsPerPort: Number of worker threads per IO port. Required that (thread
 
 uint UnusedDbConnectionTimeout: Interval, in number of seconds, a connection should go unused before it is to be released. Min=0, Max=32767, Default=300
 
-uint VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+uint VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 ## PvsServerStatus
 
@@ -6124,6 +6128,8 @@ WriteCacheType: 0 (Private), 1 (Cache on Server), 3 (Cache in Device RAM), 4 (Ca
 
 LicenseMode: 0 (None), 1 (Multiple Activation Key), or 2 (Key Management Service). Min=0, Max=2, Default=0
 
+AccelerateOfficeActivation: Run script to activate office automatically.
+
 ActiveDate: Date to activate the disk if AutoUpdateEnabled and activationDateEnabled are true. Has the date. Empty when the AutoUpdateEnabled or activationDateEnabled are false.
 
 LongDescription: Description of the Disk. Max Length=399
@@ -6301,6 +6307,8 @@ PrinterManagementEnabled: Invalid printers will be deleted from the Device when 
 WriteCacheType: 0 (Private), 1 (Cache on Server), 3 (Cache in Device RAM), 4 (Cache on Device Hard Disk), 7 (Cache on Server, Persistent), 9 (Cache in Device RAM with Overflow on Hard Disk), 10 (Private async), 11(Server persistent async), 12 (Cache in Device RAM with Overflow on Hard Disk async) Min=0, Max=12, Default=0
 
 LicenseMode: 0 (None), 1 (Multiple Activation Key), or 2 (Key Management Service). Min=0, Max=2, Default=0
+
+AccelerateOfficeActivation: Run script to activate office automatically.
 
 ActiveDate: Date to activate the disk if AutoUpdateEnabled and activationDateEnabled are true. Has the date. Empty when the AutoUpdateEnabled or activationDateEnabled are false.
 
@@ -7646,7 +7654,7 @@ AdMaxPasswordAge: Number of days before a password expires. Min=1, Max=30, Defau
 
 LicenseTimeout: Amount of seconds before a license times out. Min=15, Max=300, Default=30
 
-VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 FirstPort: Number of the first UDP port for use by the Stream Service, First and Last must allow at least 5 ports. Min=1025, Max=65534, Default=6910
 
@@ -8020,7 +8028,7 @@ AdMaxPasswordAge: Number of days before a password expires. Min=1, Max=30, Defau
 
 LicenseTimeout: Amount of seconds before a license times out. Min=15, Max=300, Default=30
 
-VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 FirstPort: Number of the first UDP port for use by the Stream Service, First and Last must allow at least 5 ports. Min=1025, Max=65534, Default=6910
 
@@ -10544,7 +10552,7 @@ uint AdMaxPasswordAge: Number of days before a password expires. Min=1, Max=30, 
 
 uint LicenseTimeout: Amount of seconds before a license times out. Min=15, Max=300, Default=30
 
-uint VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+uint VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 uint FirstPort: Number of the first UDP port for use by the Stream Service, First and Last must allow at least 5 ports. Min=1025, Max=65534, Default=6910
 
@@ -13034,6 +13042,8 @@ uint WriteCacheType: 0 (Private), 1 (Cache on Server), 3 (Cache in Device RAM), 
 
 uint LicenseMode: 0 (None), 1 (Multiple Activation Key), or 2 (Key Management Service). Min=0, Max=2, Default=0
 
+bool AccelerateOfficeActivation: Run script to activate office automatically.
+
 DateTime ActiveDate: Date to activate the disk if AutoUpdateEnabled and activationDateEnabled are true. Has the date. Empty when the AutoUpdateEnabled or activationDateEnabled are false.
 
 string LongDescription: Description of the Disk. Max Length=399
@@ -13111,6 +13121,8 @@ bool PrinterManagementEnabled: Invalid printers will be deleted from the Device 
 uint WriteCacheType: 0 (Private), 1 (Cache on Server), 3 (Cache in Device RAM), 4 (Cache on Device Hard Disk), 7 (Cache on Server, Persistent), 9 (Cache in Device RAM with Overflow on Hard Disk), 10 (Private async), 11(Server persistent async), 12 (Cache in Device RAM with Overflow on Hard Disk async) Min=0, Max=12, Default=0
 
 uint LicenseMode: 0 (None), 1 (Multiple Activation Key), or 2 (Key Management Service). Min=0, Max=2, Default=0
+
+bool AccelerateOfficeActivation: Run script to activate office automatically.
 
 DateTime ActiveDate: Date to activate the disk if AutoUpdateEnabled and activationDateEnabled are true. Has the date. Empty when the AutoUpdateEnabled or activationDateEnabled are false.
 
@@ -13716,7 +13728,7 @@ uint AdMaxPasswordAge: Number of days before a password expires. Min=1, Max=30, 
 
 uint LicenseTimeout: Amount of seconds before a license times out. Min=15, Max=300, Default=30
 
-uint VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+uint VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 uint FirstPort: Number of the first UDP port for use by the Stream Service, First and Last must allow at least 5 ports. Min=1025, Max=65534, Default=6910
 
@@ -13802,7 +13814,7 @@ uint AdMaxPasswordAge: Number of days before a password expires. Min=1, Max=30, 
 
 uint LicenseTimeout: Amount of seconds before a license times out. Min=15, Max=300, Default=30
 
-uint VDiskCreatePacing: VDisk create time pacing in miliseconds. Min=0, Max=5, Default=0
+uint VDiskCreatePacing: VDisk create time pacing in milliseconds. Min=0, Max=5, Default=0
 
 uint FirstPort: Number of the first UDP port for use by the Stream Service, First and Last must allow at least 5 ports. Min=1025, Max=65534, Default=6910
 
