@@ -4,13 +4,10 @@
 
 <p>Four different programming interfaces exist:</p>
 
-<p style="margin-left:.25in;text-indent:-.25in"><span style="font-family:Symbol">·<span style="font:7.0pt "Times New Roman""></span></span>Management Command Line Interface (MCLI)</p>
-
-<p style="margin-left:.25in;text-indent:-.25in"><span style="font-family:Symbol">·<span style="font:7.0pt "Times New Roman""></span></span>Simple Object Access Protocol (SOAP) Server Programmer Interface</p>
-
-<p style="margin-left:.25in;text-indent:-.25in"><span style="font-family:Symbol">·<span style="font:7.0pt "Times New Roman""></span></span>PowerShell Programmer Interface with Objects</p>
-
-<p style="margin-left:.25in;text-indent:-.25in"><span style="font-family:Symbol">·<span style="font:7.0pt "Times New Roman""></span></span>PowerShell Programmer Interface (Deprecated)</p>
+- Management Command Line Interface (MCLI) 
+- Simple Object Access Protocol (SOAP) Server Programmer Interface  
+- PowerShell Programmer Interface with Objects 
+- PowerShell Programmer Interface (Deprecated) 
 
 <p>This document provides the information needed to use this interface.</p>
 
