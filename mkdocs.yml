@@ -1,5 +1,5 @@
-site_name: Citrix Provisioning Services 1909 PowerShell with Objects Programmer’s Guide
-site_description: Programmer's Guide for Citrix Provisioning Services 1909 with Objects
+site_name: Citrix Provisioning Services 7.12 PowerShell with Objects Programmer’s Guide
+site_description: Programmer's Guide for Citrix Provisioning Services 7.12 with Objects
 site_title: Developer Docs
 
 # Copyright
@@ -56,9 +56,4 @@ markdown_extensions:
 
 # Page tree
 nav:
-- Index: index.md
-- Short command list: short-command-list.md
-- Cmdlet by Object Type: cmdlet-by-object-type.md
-- Error Codes: error-codes.md
-- Objects in the Citrix.PVS.SnapIn Namespace: citrix-pvs-snapin-namespace.md
-- Cmdlets: cmdlets.md
+- Programmer's Guide for Citrix Provisioning Services 7.12 with Objects: index.md
