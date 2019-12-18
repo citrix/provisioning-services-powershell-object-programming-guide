@@ -56,6 +56,11 @@ markdown_extensions:
 
 # Page tree
 nav:
+- Versions:
+  - latest: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/latest/
+  - 1906: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1906/
+  - 1903: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1903/
+  - 7.12: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/7.12/
 - Index: index.md
 - Short command list: short-command-list.md
 - Cmdlet by Object Type: cmdlet-by-object-type.md
