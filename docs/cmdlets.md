@@ -12686,3 +12686,13 @@ Force the Inventory service to refresh its Inventory Table.
 #### EXAMPLE 1: Update-PvsInventory
 
 Update-PvsInventory
+
+## UseResourcePool
+
+To provision machines at the resource pool level, use the Start-ProvisionXdMachines with the -UseResourcePool switch parameter.
+
+```powershell 
+Start-PvsProvisionXdMachines -DdcAddress <ddcAddress> -BootType <bootType> -CatalogName <catalogName> -CatalogDescription <catalogDescription> -SessionSupport <sessionSupport> -AllocationType <allocationType> -PersistUserChanges <persistUserChanges> -Scope <scope> -VdaLevel <vdaLevel> -XenDesktopHostResource <hostname> -HostResourcePassword <hostPassword> -TemplateName <templateName> -NetworkPath <networkPath> -StoreId <storeId> -SiteId <siteId> -DiskLocatorId <diskLocatorId> -Domain <domain> -OrganizationalUnit <organizationalUnit> -NamingScheme <namingScheme> -VmCount <vmCount> -DeviceMemory <deviceMemory> -DeviceCpu <deviceCPU> -DeviceWriteCacheSize <deviceWriteCacheSize> -NameSuffixType <nameSuffixType> -VmPvdSize <vmPvdSize> -VmPvdDrive <vmPvdDrive> -UseResourcePool
+```
+
+Note: If the parameter `-UseResourcePool` is not included, the VDA is provisioned at the root cluster level.
