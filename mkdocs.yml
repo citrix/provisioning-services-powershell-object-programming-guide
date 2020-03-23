@@ -58,6 +58,7 @@ markdown_extensions:
 # Page tree
 nav:
 - Versions:
+  - latest: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/latest/
   - 1909: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1909/
   - 1906: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1906/
   - 1903: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1903/
