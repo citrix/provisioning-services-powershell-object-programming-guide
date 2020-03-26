@@ -230,7 +230,7 @@ uint Authentication: Device log in authentication. Choices are 0 for none, 1 for
 
 bool BdmBoot: Use PXE boot when set to false, BDM boot when set to true. Default is PXE Default=false
 
-DateTime BdmCreated: Timstamp when BDM device was created  Default=Empty
+DateTime BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 uint BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
@@ -372,7 +372,7 @@ uint Authentication: Device log in authentication. Choices are 0 for none, 1 for
 
 bool BdmBoot: Use PXE boot when set to false, BDM boot when set to true. Default is PXE Default=false
 
-DateTime BdmCreated: Timstamp when BDM device was created  Default=Empty
+DateTime BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 uint BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 

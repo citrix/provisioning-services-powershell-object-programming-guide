@@ -1,6 +1,3 @@
-
-
-
 # Cmdlets
 
 ## Add-PvsDeviceToDomain
@@ -1887,7 +1884,7 @@ BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
 BdmUpdated: Timestamp of the last BDM boot disk update. Default=Empty
 
-BdmCreated: Timstamp when BDM device was created  Default=Empty
+BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 XsPvsProxyUuid: UUID of XenServer PVS\_proxy Default=00000000-0000-0000-0000-000000000000
 
@@ -2323,7 +2320,7 @@ BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
 BdmUpdated: Timestamp of the last BDM boot disk update. Default=Empty
 
-BdmCreated: Timstamp when BDM device was created  Default=Empty
+BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 XsPvsProxyUuid: UUID of XenServer PVS\_proxy Default=00000000-0000-0000-0000-000000000000
 
@@ -6741,7 +6738,7 @@ uint BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
 DateTime BdmUpdated: Timestamp of the last BDM boot disk update. Default=Empty
 
-DateTime BdmCreated: Timstamp when BDM device was created  Default=Empty
+DateTime BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 Guid XsPvsProxyUuid: UUID of XenServer PVS\_proxy Default=00000000-0000-0000-0000-000000000000
 
@@ -9337,7 +9334,7 @@ uint BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
 DateTime BdmUpdated: Timestamp of the last BDM boot disk update. Default=Empty
 
-DateTime BdmCreated: Timstamp when BDM device was created  Default=Empty
+DateTime BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 Guid XsPvsProxyUuid: UUID of XenServer PVS\_proxy Default=00000000-0000-0000-0000-000000000000
 
@@ -9425,7 +9422,7 @@ uint BdmFormat: 1 use VHD for BDMboot, 2 use ISO, 3 use USB. Default=0
 
 DateTime BdmUpdated: Timestamp of the last BDM boot disk update. Default=Empty
 
-DateTime BdmCreated: Timstamp when BDM device was created  Default=Empty
+DateTime BdmCreated: Timestamp when BDM device was created  Default=Empty
 
 Guid XsPvsProxyUuid: UUID of XenServer PVS\_proxy Default=00000000-0000-0000-0000-000000000000
 
@@ -12686,13 +12683,3 @@ Force the Inventory service to refresh its Inventory Table.
 #### EXAMPLE 1: Update-PvsInventory
 
 Update-PvsInventory
-
-## UseResourcePool
-
-To provision machines at the resource pool level, use the Start-ProvisionXdMachines with the -UseResourcePool switch parameter.
-
-```powershell 
-Start-PvsProvisionXdMachines -DdcAddress <ddcAddress> -BootType <bootType> -CatalogName <catalogName> -CatalogDescription <catalogDescription> -SessionSupport <sessionSupport> -AllocationType <allocationType> -PersistUserChanges <persistUserChanges> -Scope <scope> -VdaLevel <vdaLevel> -XenDesktopHostResource <hostname> -HostResourcePassword <hostPassword> -TemplateName <templateName> -NetworkPath <networkPath> -StoreId <storeId> -SiteId <siteId> -DiskLocatorId <diskLocatorId> -Domain <domain> -OrganizationalUnit <organizationalUnit> -NamingScheme <namingScheme> -VmCount <vmCount> -DeviceMemory <deviceMemory> -DeviceCpu <deviceCPU> -DeviceWriteCacheSize <deviceWriteCacheSize> -NameSuffixType <nameSuffixType> -VmPvdSize <vmPvdSize> -VmPvdDrive <vmPvdDrive> -UseResourcePool
-```
-
-Note: If the parameter `-UseResourcePool` is not included, the VDA is provisioned at the root cluster level.
