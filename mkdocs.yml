@@ -4,13 +4,13 @@ site_title: Developer Docs
 site_url: https://developer-docs.citrix.com/
 
 # Copyright
-copyright: '&copy; 1999-2020 Citrix Systems, Inc. All rights reserved. '
+copyright: '&copy; 1999-2021 Citrix Systems, Inc. All rights reserved. '
 
 # Feedback
 
 issues_uri: https://github.com/citrix/devdocs-issue-collector/issues/new
 assignees_uri:
-  - ajitchelat
+  - kurtcoll
 labels_uri:
   - documentation
 
@@ -33,8 +33,7 @@ theme:
   
   # Default values, taken from mkdocs_theme.yml
   language: en
-  features:
-    - tabs: false
+
   palette:
     primary: teal
     accent: teal
@@ -63,15 +62,13 @@ markdown_extensions:
 plugins:
   - search:
       separator: '[\s\-\.]+'
+      prebuild_index: true
 
 # Page tree
 nav:
 - Versions:
   - latest: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/latest/
   - 1909: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1909/
-  - 1906: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1906/
-  - 1903: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1903/
-  - 7.12: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/7.12/
 - Index: index.md
 - Short command list: short-command-list.md
 - Cmdlet by Object Type: cmdlet-by-object-type.md
