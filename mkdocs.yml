@@ -69,6 +69,7 @@ nav:
 - Versions:
   - latest: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/latest/
   - 1909: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1909/
+  - 1906: https://developer-docs.citrix.com/projects/provisioning-services-powershell-object-programming-guide/en/1906/
 - Index: index.md
 - Short command list: short-command-list.md
 - Cmdlet by Object Type: cmdlet-by-object-type.md
